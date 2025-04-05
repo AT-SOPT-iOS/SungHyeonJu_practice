@@ -13,6 +13,8 @@
 		E506089A2DA0F54A00CC10EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E50608902DA0F54A00CC10EF /* Assets.xcassets */; };
 		E506089C2DA0F54A00CC10EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50608932DA0F54A00CC10EF /* LaunchScreen.storyboard */; };
 		E506089F2DA1070C00CC10EF /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E506089E2DA1070C00CC10EF /* UIView+.swift */; };
+		E50608A32DA10D4000CC10EF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50608A22DA10D4000CC10EF /* WelcomeViewController.swift */; };
+		E50608A62DA1142000CC10EF /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50608A52DA1142000CC10EF /* ImageLiterals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E50608942DA0F54A00CC10EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E50608952DA0F54A00CC10EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E506089E2DA1070C00CC10EF /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		E50608A22DA10D4000CC10EF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		E50608A52DA1142000CC10EF /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,9 @@
 				E50608912DA0F54A00CC10EF /* Info.plist */,
 				E50608932DA0F54A00CC10EF /* LaunchScreen.storyboard */,
 				E50608952DA0F54A00CC10EF /* LoginViewController.swift */,
+				E50608A22DA10D4000CC10EF /* WelcomeViewController.swift */,
 				E506089D2DA106F900CC10EF /* Extention */,
+				E50608A42DA1140900CC10EF /* Literals */,
 			);
 			path = SOPT36_Week1;
 			sourceTree = "<group>";
@@ -73,6 +79,14 @@
 				E506089E2DA1070C00CC10EF /* UIView+.swift */,
 			);
 			path = Extention;
+			sourceTree = "<group>";
+		};
+		E50608A42DA1140900CC10EF /* Literals */ = {
+			isa = PBXGroup;
+			children = (
+				E50608A52DA1142000CC10EF /* ImageLiterals.swift */,
+			);
+			path = Literals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E506089F2DA1070C00CC10EF /* UIView+.swift in Sources */,
+				E50608A62DA1142000CC10EF /* ImageLiterals.swift in Sources */,
+				E50608A32DA10D4000CC10EF /* WelcomeViewController.swift in Sources */,
 				E50608972DA0F54A00CC10EF /* AppDelegate.swift in Sources */,
 				E50608982DA0F54A00CC10EF /* SceneDelegate.swift in Sources */,
 				E50608992DA0F54A00CC10EF /* LoginViewController.swift in Sources */,
