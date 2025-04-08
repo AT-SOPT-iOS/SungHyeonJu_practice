@@ -72,12 +72,7 @@ class LoginViewController: UIViewController {
 
     private func pushToWelcomeVC() {
         let welcomeViewController = WelcomeViewController()
-
-        //프로퍼티로 구현
-        //welcomeViewController.id = idTextField.text ?? ""
-
-        //함수로 구현
-        welcomeViewController.setLabelText(id: idTextField.text)
+        welcomeViewController.id = idTextField.text ?? ""
         self.navigationController?.pushViewController(welcomeViewController, animated: true)
     }
 

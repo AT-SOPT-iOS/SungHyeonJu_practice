@@ -10,12 +10,12 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     // MARK: - Properties
-    var id: String?
+    var id: String = ""
 
     // MARK: - UIComponent
     lazy var welcomeLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 80, y: 161, width: 236, height: 44))
-        label.text = "\(id)님 \n반가워요!"
+        label.text = "???님 \n반가워요!"
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = 2
@@ -57,7 +57,7 @@ class WelcomeViewController: UIViewController {
                               mainButton,
                               reLoginButton,
                               raabitImageView)
-        //bindID()
+        bindID()
     }
 
     //MARK: - ActionMethod
@@ -77,16 +77,8 @@ class WelcomeViewController: UIViewController {
 
     //MARK: - PrivateMethod
 
-
-    //프로퍼티로 구현
     private func bindID() {
         self.welcomeLabel.text = "\(id)님 \n반가워요!"
-    }
-
-
-    //함수로 구현
-    func setLabelText(id: String?) {
-        self.id = id
     }
 
     //MARK: - NavigationMethod
