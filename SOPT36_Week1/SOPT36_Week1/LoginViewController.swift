@@ -9,8 +9,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    // MARK: - Properties
-
     // MARK: - UIComponent
     lazy var titleLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 80, y: 161, width: 236, height: 44))
@@ -44,7 +42,7 @@ class LoginViewController: UIViewController {
         button.setTitle("로그인하기", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 18)
-        button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
+        button.addTarget(LoginViewController.self, action: #selector(loginButtonDidTap), for: .touchUpInside)
         return button
     }()
 
@@ -61,42 +59,18 @@ class LoginViewController: UIViewController {
     //MARK: - ActionMethod
     @objc
     private func loginButtonDidTap() {
-        pushToWelcomeVC()
-        //presentWelcomeVC()
+        printHelloWorld()
     }
 
     //MARK: - PrivateMethod
 
-
-    //MARK: - NavigationMethod
-
-    private func pushToWelcomeVC() {
-        let welcomeViewController = WelcomeViewController()
-        welcomeViewController.id = idTextField.text ?? ""
-        self.navigationController?.pushViewController(welcomeViewController, animated: true)
+    private func printHelloWorld() {
+        print("helloWorld")
     }
 
-    private func presentHalfModalTOWelcomeVC() {
-        let welcomeViewController = WelcomeViewController()
-        welcomeViewController.modalPresentationStyle = .pageSheet
-
-        if let sheet = welcomeViewController.sheetPresentationController {
-            sheet.detents = [.medium(), .large()]
-            sheet.prefersGrabberVisible = true
-            sheet.preferredCornerRadius = 20
-        }
-
-        self.present(welcomeViewController, animated: true, completion: nil)
-    }
-
-    private func presentToWelcomeVC() {
-        let welcomeViewController = WelcomeViewController()
-        welcomeViewController.modalPresentationStyle = .formSheet
-        self.present(welcomeViewController, animated: true)
-    }
 }
 
-//MARK: - Preview
+//MARK: Preview
 #Preview("VC", traits: .defaultLayout, body: {
     LoginViewController()
 })
