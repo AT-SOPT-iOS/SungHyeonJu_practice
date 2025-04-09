@@ -10,12 +10,11 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     // MARK: - Properties
-    var id: String?
+    private var id: String?
 
     // MARK: - UIComponent
     lazy var welcomeLabel: UILabel = {
-        let label = UILabel(frame: CGRect(x: 80, y: 161, width: 236, height: 80))
-        label.text = "\(id)님 \n반가워요!"
+        let label = UILabel(frame: CGRect(x: 140, y: 295, width: 95, height: 60))
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = 2
@@ -24,20 +23,22 @@ class WelcomeViewController: UIViewController {
     }()
 
     lazy var raabitImageView: UIImageView = {
-        let imageView = UIImageView(frame: CGRect(x: 150, y: 280, width: 100, height: 100))
+        let imageView = UIImageView(frame: CGRect(x: 112, y: 87, width: 150, height: 150))
         imageView.image = ImageLiterals.rabbit
         return imageView
     }()
 
     lazy var mainButton: BaseFillButton = {
-        let button = BaseFillButton(frame: CGRect(x: 21, y: 422, width: 332, height: 58))
+        let button = BaseFillButton(frame: CGRect(x: 20, y: 426, width: 332, height: 58))
         button.setTitle("메인으로", for: .normal)
-        button.addTarget(self, action: #selector(mainButtonDidTapped), for: .touchUpInside)
+        
+        //button disable때문에 구현을위해 임의로 셀렉터함수 변경했습니다
+        button.addTarget(self, action: #selector(reLoginButtonDidTapped), for: .touchUpInside)
         return button
     }()
 
     lazy var reLoginButton: BaseFillButton = {
-        let button = BaseFillButton(frame: CGRect(x: 21, y: 500, width: 332, height: 58))
+        let button = BaseFillButton(frame: CGRect(x: 20, y: 498, width: 332, height: 58))
         button.setTitle("다시 로그인", for: .normal)
         button.addTarget(self, action: #selector(reLoginButtonDidTapped), for: .touchUpInside)
         button.isEnabled = false
@@ -52,7 +53,7 @@ class WelcomeViewController: UIViewController {
                               mainButton,
                               reLoginButton,
                               raabitImageView)
-        //bindID()
+        bindID()
     }
 
     //MARK: - ActionMethod
@@ -72,15 +73,20 @@ class WelcomeViewController: UIViewController {
 
     //MARK: - PrivateMethod
 
-    //프로퍼티로 구현
     private func bindID() {
-        self.welcomeLabel.text = "\(id)님 \n반가워요!"
+        guard let id = id, !id.isEmpty else {
+            self.welcomeLabel.text = "???님\n반가워요!"
+            return
+        }
+        self.welcomeLabel.text = "\(id)님\n반가워요!"
     }
 
-    //함수로 구현
-    func setLabelText(id: String?) {
-        self.id = id
-    }
+    //MARK: - HelperMethod
+
+
+    public func setLabelText(id: String?){
+            self.id = id
+        }
 }
 
 

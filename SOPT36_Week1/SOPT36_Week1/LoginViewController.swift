@@ -11,7 +11,7 @@ class LoginViewController: UIViewController {
 
     // MARK: - UIComponent
     lazy var titleLabel: UILabel = {
-        let label = UILabel(frame: CGRect(x: 80, y: 161, width: 236, height: 44))
+        let label = UILabel(frame: CGRect(x: 53, y: 163, width: 236, height: 44))
         label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
         label.textColor = .black
         label.textAlignment = .center
@@ -78,19 +78,6 @@ class LoginViewController: UIViewController {
         //함수로 구현
         welcomeViewController.setLabelText(id: idTextField.text)
         self.navigationController?.pushViewController(welcomeViewController, animated: true)
-    }
-
-    private func presentHalfModalTOWelcomeVC() {
-        let welcomeViewController = WelcomeViewController()
-        welcomeViewController.modalPresentationStyle = .pageSheet
-
-        if let sheet = welcomeViewController.sheetPresentationController {
-            sheet.detents = [.medium(), .large()]
-            sheet.prefersGrabberVisible = true
-            sheet.preferredCornerRadius = 20
-        }
-
-        self.present(welcomeViewController, animated: true, completion: nil)
     }
 
     private func presentToWelcomeVC() {
