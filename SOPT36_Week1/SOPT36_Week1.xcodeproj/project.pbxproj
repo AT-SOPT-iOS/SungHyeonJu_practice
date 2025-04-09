@@ -28,6 +28,7 @@
 		E553A5672DA6C82D00B92685 /* BaseFillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553A5662DA6C82D00B92685 /* BaseFillButton.swift */; };
 		E553A5692DA6C87600B92685 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553A5682DA6C87600B92685 /* UIButton+.swift */; };
 		E553A56D2DA6CCAD00B92685 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553A56C2DA6CCAD00B92685 /* UITextField+.swift */; };
+		E553A56F2DA6D62600B92685 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553A56E2DA6D62600B92685 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		E553A5662DA6C82D00B92685 /* BaseFillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFillButton.swift; sourceTree = "<group>"; };
 		E553A5682DA6C87600B92685 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		E553A56C2DA6CCAD00B92685 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		E553A56E2DA6D62600B92685 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				E506089E2DA1070C00CC10EF /* UIView+.swift */,
 				E553A5632DA6C61100B92685 /* UIFont+.swift */,
 				E553A5682DA6C87600B92685 /* UIButton+.swift */,
+				E553A56E2DA6D62600B92685 /* UIColor+.swift */,
 				E553A56C2DA6CCAD00B92685 /* UITextField+.swift */,
 			);
 			path = Extention;
@@ -238,6 +241,7 @@
 				E553A56D2DA6CCAD00B92685 /* UITextField+.swift in Sources */,
 				E50608A62DA1142000CC10EF /* ImageLiterals.swift in Sources */,
 				E50608A32DA10D4000CC10EF /* WelcomeViewController.swift in Sources */,
+				E553A56F2DA6D62600B92685 /* UIColor+.swift in Sources */,
 				E553A5642DA6C61100B92685 /* UIFont+.swift in Sources */,
 				E553A5692DA6C87600B92685 /* UIButton+.swift in Sources */,
 				E50608972DA0F54A00CC10EF /* AppDelegate.swift in Sources */,

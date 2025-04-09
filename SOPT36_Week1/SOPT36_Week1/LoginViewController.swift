@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
         let textField = UITextField(frame: CGRect(x: 20, y: 276, width: 335, height: 52))
         textField.placeholder = "아이디"
         textField.font = UIFont.subhead4
-        textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+        textField.backgroundColor = .Gray200
         textField.layer.cornerRadius = 3
         textField.addLeftPadding(width: 23)
         return textField
@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         let textField = UITextField(frame: CGRect(x: 20, y: 335, width: 335, height: 52))
         textField.placeholder = "비밀번호"
         textField.font = UIFont.subhead4
-        textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+        textField.backgroundColor = .Gray200
         textField.layer.cornerRadius = 3
         textField.addLeftPadding(width: 23)
         return textField
