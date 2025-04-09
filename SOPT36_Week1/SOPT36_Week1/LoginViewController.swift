@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
         textField.font = UIFont.subhead4
         textField.backgroundColor = .Gray200
         textField.layer.cornerRadius = 3
+        textField.clearButtonMode = .always
         textField.addLeftPadding(width: 23)
         return textField
     }()
@@ -36,6 +37,7 @@ class LoginViewController: UIViewController {
         textField.font = UIFont.subhead4
         textField.backgroundColor = .Gray200
         textField.layer.cornerRadius = 3
+        textField.clearButtonMode = .always
         textField.addLeftPadding(width: 23)
         return textField
     }()
@@ -44,6 +46,7 @@ class LoginViewController: UIViewController {
         let button = BaseFillButton(frame: CGRect(x: 21, y: 422, width: 332, height: 58))
         button.setTitle("로그인하기", for: .normal)
         button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
+        button.isEnabled = false
         return button
     }()
 
@@ -55,6 +58,7 @@ class LoginViewController: UIViewController {
                               idTextField,
                               passwordTextField,
                               loginButton)
+        configureTextFieldTargets()
     }
 
     //MARK: - ActionMethod
@@ -64,8 +68,19 @@ class LoginViewController: UIViewController {
         //presentWelcomeVC()
     }
 
-    //MARK: - PrivateMethod
+    @objc
+    private func textFieldsDidChange() {
+        let isIDFilled = !(idTextField.text ?? "").isEmpty
+        let isPasswordFilled = !(passwordTextField.text ?? "").isEmpty
+        loginButton.isEnabled = isIDFilled && isPasswordFilled
+    }
 
+    //MARK: - PrivateMethod
+    private func configureTextFieldTargets() {
+        [idTextField, passwordTextField].forEach {
+            $0.addTarget(self, action: #selector(textFieldsDidChange), for: .editingChanged)
+        }
+    }
 
     //MARK: - NavigationMethod
 
