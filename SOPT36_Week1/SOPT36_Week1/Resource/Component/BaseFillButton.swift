@@ -32,6 +32,7 @@ class BaseFillButton: UIButton {
 
     private func setEnableButton() {
         isUserInteractionEnabled = true
+        setTitleColor(.white, for: .normal)
         backgroundColor = .Primary_orange
     }
 
