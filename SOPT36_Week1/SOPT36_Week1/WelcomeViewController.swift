@@ -14,12 +14,12 @@ class WelcomeViewController: UIViewController {
 
     // MARK: - UIComponent
     lazy var welcomeLabel: UILabel = {
-        let label = UILabel(frame: CGRect(x: 80, y: 161, width: 236, height: 44))
+        let label = UILabel(frame: CGRect(x: 80, y: 161, width: 236, height: 80))
         label.text = "\(id)님 \n반가워요!"
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = 2
-        label.font = .boldSystemFont(ofSize: 16)
+        label.font = UIFont.head1
         return label
     }()
 
@@ -29,23 +29,18 @@ class WelcomeViewController: UIViewController {
         return imageView
     }()
 
-    var mainButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 21, y: 422, width: 332, height: 58))
-        button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
+    lazy var mainButton: BaseFillButton = {
+        let button = BaseFillButton(frame: CGRect(x: 21, y: 422, width: 332, height: 58))
         button.setTitle("메인으로", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 18)
         button.addTarget(self, action: #selector(mainButtonDidTapped), for: .touchUpInside)
         return button
     }()
 
-    var reLoginButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 21, y: 500, width: 332, height: 58))
-        button.backgroundColor =  UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+    lazy var reLoginButton: BaseFillButton = {
+        let button = BaseFillButton(frame: CGRect(x: 21, y: 500, width: 332, height: 58))
         button.setTitle("다시 로그인", for: .normal)
-        button.setTitleColor(.systemGray, for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 18)
         button.addTarget(self, action: #selector(reLoginButtonDidTapped), for: .touchUpInside)
+        button.isEnabled = false
         return button
     }()
 
@@ -77,24 +72,15 @@ class WelcomeViewController: UIViewController {
 
     //MARK: - PrivateMethod
 
-
     //프로퍼티로 구현
     private func bindID() {
         self.welcomeLabel.text = "\(id)님 \n반가워요!"
     }
 
-
     //함수로 구현
     func setLabelText(id: String?) {
         self.id = id
     }
-
-    //MARK: - NavigationMethod
-
 }
 
-//MARK: - Preview
-#Preview("VC", traits: .defaultLayout, body: {
-    WelcomeViewController()
-})
 
