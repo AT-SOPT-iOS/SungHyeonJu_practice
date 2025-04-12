@@ -1,5 +1,5 @@
 //
-//  WelcomeViewController_DelegatePattern.swift
+//  WelcomeViewController_Closure.swift
 //  SOPT36_Week1
 //
 //  Created by 성현주 on 4/12/25.
@@ -7,17 +7,12 @@
 
 import UIKit
 
-
-protocol DataBindDelegate: AnyObject {
-    func dataBind(id: String)
-}
-
-
-final class WelcomeViewController_DelegatePattern: UIViewController {
+class WelcomeViewController_Closure: UIViewController {
 
     // MARK: - Properties
     private var id: String?
-    weak var delegate : DataBindDelegate?
+
+    var loginDataCompletion: ((String) -> Void)?
 
     // MARK: - UIComponent
     lazy var welcomeLabel: UILabel = {
@@ -66,15 +61,18 @@ final class WelcomeViewController_DelegatePattern: UIViewController {
     //MARK: - ActionMethod
     @objc
     private func reLoginButtonDidTapped() {
-        if let id = id {
-            delegate?.dataBind(id: id)
-            print(id)
+
+        guard let loginDataCompletion else {return}
+
+        if let id = id{
+            loginDataCompletion(id)
         }
 
+
         if self.navigationController == nil {
-            self.dismiss(animated: true) //prent로 호출 된경우
+            self.dismiss(animated: true)
         } else {
-            self.navigationController?.popViewController(animated: true) //push로 호출 된 경우
+            self.navigationController?.popViewController(animated: true)
         }
     }
 
@@ -95,9 +93,11 @@ final class WelcomeViewController_DelegatePattern: UIViewController {
 
     //MARK: - HelperMethod
 
+
     public func setLabelText(id: String?){
             self.id = id
         }
 }
+
 
 
