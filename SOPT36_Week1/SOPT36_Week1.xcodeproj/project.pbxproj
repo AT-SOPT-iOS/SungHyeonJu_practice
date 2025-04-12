@@ -19,6 +19,7 @@
 		E54065CA2DAA3A1E00FD2C01 /* LoginViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54065C92DAA3A1E00FD2C01 /* LoginViewController_Closure.swift */; };
 		E54065CC2DAA3A2A00FD2C01 /* WelcomeViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54065CB2DAA3A2A00FD2C01 /* WelcomeViewController_Closure.swift */; };
 		E54065D12DAA4AEF00FD2C01 /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54065D02DAA4AEF00FD2C01 /* AutoLayoutViewController.swift */; };
+		E54066AA2DAA591E00FD2C01 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54066A92DAA591E00FD2C01 /* ScrollViewController.swift */; };
 		E553A5292DA6C0B300B92685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E553A5272DA6C0B300B92685 /* Assets.xcassets */; };
 		E553A55A2DA6C4A200B92685 /* Pretendard-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E553A5592DA6C4A200B92685 /* Pretendard-Thin.ttf */; };
 		E553A55B2DA6C4A200B92685 /* Pretendard-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E553A5522DA6C4A200B92685 /* Pretendard-Bold.ttf */; };
@@ -51,6 +52,7 @@
 		E54065C92DAA3A1E00FD2C01 /* LoginViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Closure.swift; sourceTree = "<group>"; };
 		E54065CB2DAA3A2A00FD2C01 /* WelcomeViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Closure.swift; sourceTree = "<group>"; };
 		E54065D02DAA4AEF00FD2C01 /* AutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutViewController.swift; sourceTree = "<group>"; };
+		E54066A92DAA591E00FD2C01 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		E553A5272DA6C0B300B92685 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E553A5512DA6C4A200B92685 /* Pretendard-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.ttf"; sourceTree = "<group>"; };
 		E553A5522DA6C4A200B92685 /* Pretendard-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.ttf"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				E50608952DA0F54A00CC10EF /* LoginViewController.swift */,
 				E50608A22DA10D4000CC10EF /* WelcomeViewController.swift */,
+				E54066A82DAA58EA00FD2C01 /* ScrollView */,
 				E54065CF2DAA4AD700FD2C01 /* AutoLayout */,
 				E54065C82DAA39FF00FD2C01 /* Closure */,
 				E54065C72DAA370900FD2C01 /* Delegate */,
@@ -174,6 +177,14 @@
 				E54065D02DAA4AEF00FD2C01 /* AutoLayoutViewController.swift */,
 			);
 			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		E54066A82DAA58EA00FD2C01 /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				E54066A92DAA591E00FD2C01 /* ScrollViewController.swift */,
+			);
+			path = ScrollView;
 			sourceTree = "<group>";
 		};
 		E553A5282DA6C0B300B92685 /* Resource */ = {
@@ -300,6 +311,7 @@
 				E553A5642DA6C61100B92685 /* UIFont+.swift in Sources */,
 				E553A5692DA6C87600B92685 /* UIButton+.swift in Sources */,
 				E50608972DA0F54A00CC10EF /* AppDelegate.swift in Sources */,
+				E54066AA2DAA591E00FD2C01 /* ScrollViewController.swift in Sources */,
 				E54065C32DAA328C00FD2C01 /* LoginViewController_DelegatePattern.swift in Sources */,
 				E553A5672DA6C82D00B92685 /* BaseFillButton.swift in Sources */,
 				E54065CA2DAA3A1E00FD2C01 /* LoginViewController_Closure.swift in Sources */,

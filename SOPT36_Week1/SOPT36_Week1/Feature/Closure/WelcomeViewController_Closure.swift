@@ -93,11 +93,7 @@ class WelcomeViewController_Closure: UIViewController {
 
     //MARK: - HelperMethod
 
-
     public func setLabelText(id: String?){
             self.id = id
         }
 }
-
-
-
