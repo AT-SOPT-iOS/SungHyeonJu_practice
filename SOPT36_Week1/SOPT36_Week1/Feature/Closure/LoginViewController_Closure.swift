@@ -92,12 +92,16 @@ class LoginViewController_Closure: UIViewController {
 
         //함수로 구현
         welcomeViewController.setLabelText(id: idTextField.text)
-        welcomeViewController.loginDataCompletion = {[weak self] data in print("제가 들고온 데이터는yo?", data)
-            guard let self else {return}
+//        welcomeViewController.loginDataCompletion = {[weak self] data in print("제가 들고온 데이터는yo?", data)
+//            guard let self else {return}
+//            self.passwordTextField.text = data
+//
+//
+//        }
+        welcomeViewController.loginDataCompletion = { data in
             self.passwordTextField.text = data
-
-
         }
+
 
 
         self.navigationController?.pushViewController(welcomeViewController, animated: true)

@@ -20,6 +20,7 @@
 		E54065CC2DAA3A2A00FD2C01 /* WelcomeViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54065CB2DAA3A2A00FD2C01 /* WelcomeViewController_Closure.swift */; };
 		E54065D12DAA4AEF00FD2C01 /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54065D02DAA4AEF00FD2C01 /* AutoLayoutViewController.swift */; };
 		E54066AA2DAA591E00FD2C01 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54066A92DAA591E00FD2C01 /* ScrollViewController.swift */; };
+		E54066AC2DAE28F200FD2C01 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54066AB2DAE28F200FD2C01 /* BaseUIViewController.swift */; };
 		E553A5292DA6C0B300B92685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E553A5272DA6C0B300B92685 /* Assets.xcassets */; };
 		E553A55A2DA6C4A200B92685 /* Pretendard-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E553A5592DA6C4A200B92685 /* Pretendard-Thin.ttf */; };
 		E553A55B2DA6C4A200B92685 /* Pretendard-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E553A5522DA6C4A200B92685 /* Pretendard-Bold.ttf */; };
@@ -53,6 +54,7 @@
 		E54065CB2DAA3A2A00FD2C01 /* WelcomeViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Closure.swift; sourceTree = "<group>"; };
 		E54065D02DAA4AEF00FD2C01 /* AutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutViewController.swift; sourceTree = "<group>"; };
 		E54066A92DAA591E00FD2C01 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		E54066AB2DAE28F200FD2C01 /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
 		E553A5272DA6C0B300B92685 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E553A5512DA6C4A200B92685 /* Pretendard-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.ttf"; sourceTree = "<group>"; };
 		E553A5522DA6C4A200B92685 /* Pretendard-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.ttf"; sourceTree = "<group>"; };
@@ -100,13 +102,13 @@
 		E50608962DA0F54A00CC10EF /* SOPT36_Week1 */ = {
 			isa = PBXGroup;
 			children = (
+				E54066AE2DAE292900FD2C01 /* Base */,
 				E54065C62DAA361200FD2C01 /* Application */,
 				E54065C12DAA326500FD2C01 /* Feature */,
 				E50608932DA0F54A00CC10EF /* LaunchScreen.storyboard */,
 				E50608912DA0F54A00CC10EF /* Info.plist */,
 				E506089D2DA106F900CC10EF /* Extention */,
 				E553A5282DA6C0B300B92685 /* Resource */,
-				E50608A42DA1140900CC10EF /* Literals */,
 			);
 			path = SOPT36_Week1;
 			sourceTree = "<group>";
@@ -187,12 +189,21 @@
 			path = ScrollView;
 			sourceTree = "<group>";
 		};
+		E54066AE2DAE292900FD2C01 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E54066AB2DAE28F200FD2C01 /* BaseUIViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		E553A5282DA6C0B300B92685 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E553A5272DA6C0B300B92685 /* Assets.xcassets */,
 				E553A5652DA6C81900B92685 /* Component */,
 				E553A52A2DA6C0C500B92685 /* Font */,
-				E553A5272DA6C0B300B92685 /* Assets.xcassets */,
+				E50608A42DA1140900CC10EF /* Literals */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -308,6 +319,7 @@
 				E50608A62DA1142000CC10EF /* ImageLiterals.swift in Sources */,
 				E50608A32DA10D4000CC10EF /* WelcomeViewController.swift in Sources */,
 				E553A56F2DA6D62600B92685 /* UIColor+.swift in Sources */,
+				E54066AC2DAE28F200FD2C01 /* BaseUIViewController.swift in Sources */,
 				E553A5642DA6C61100B92685 /* UIFont+.swift in Sources */,
 				E553A5692DA6C87600B92685 /* UIButton+.swift in Sources */,
 				E50608972DA0F54A00CC10EF /* AppDelegate.swift in Sources */,
