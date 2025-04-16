@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ScrollViewController: UIViewController {
+final class ScrollViewController: BaseUIViewController {
 
     //MARK: - Properties
-    let boxHeight = 800.0
+    private let boxHeight = 800.0
 
     // MARK: - UIComponent
     private let scrollView = UIScrollView()
@@ -26,21 +26,16 @@ class ScrollViewController: UIViewController {
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-
-        view.addSubview(scrollView)
+        self.view.addSubview(scrollView)
         scrollView.addSubview(contentView)
 
         [redView, orangeView, yellowView, greenView, blueView, purpleView].forEach {
             contentView.addSubview($0)
         }
-
-        setUI()
-        setLayout()
     }
 
     //MARK: - Private Method
-    private func setUI() {
+    override func setUI() {
         redView.backgroundColor = .red
         orangeView.backgroundColor = .orange
         yellowView.backgroundColor = .yellow
@@ -49,7 +44,7 @@ class ScrollViewController: UIViewController {
         blueView.backgroundColor = .blue
     }
 
-    private func setLayout() {
+    override func setLayout() {
         [scrollView, contentView,
          redView, orangeView, yellowView, greenView, blueView, purpleView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false

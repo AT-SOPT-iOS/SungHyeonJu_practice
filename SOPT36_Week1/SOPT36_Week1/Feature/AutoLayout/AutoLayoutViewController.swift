@@ -7,50 +7,38 @@
 
 import UIKit
 
-final class AutoLayoutViewController: UIViewController {
+final class AutoLayoutViewController: BaseUIViewController {
+    
     //MARK: - Properites
-    let height = UIScreen.main.bounds.height / 4
-    let width = UIScreen.main.bounds.width / 2
+    private let height = UIScreen.main.bounds.height / 4
+    private let width = UIScreen.main.bounds.width / 2
 
     // MARK: - UIComponent
-    lazy var yellowView: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: width, height: 44))
-        view.backgroundColor = .yellow
-        return view
-    }()
 
-    lazy var blackView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .black
-        return view
-    }()
-
-    lazy var blueView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .blue
-        return view
-    }()
-
-    lazy var greenView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .green
-        return view
-    }()
+    private let yellowView = UIView()
+    private let blackView = UIView()
+    private let blueView = UIView()
+    private let greenView = UIView()
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
         self.view.addSubviews(yellowView,
                               greenView,
                               blackView,
                               blueView)
-        setConstraints()
     }
 
     // MARK: - Private Method
 
-    private func setConstraints() {
+    override func setUI(){
+        yellowView.backgroundColor = .yellow
+        greenView.backgroundColor = .green
+        blackView.backgroundColor = .black
+        blueView.backgroundColor = .blue
+    }
+
+    override func setLayout() {
         [yellowView, blueView, greenView, blackView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
