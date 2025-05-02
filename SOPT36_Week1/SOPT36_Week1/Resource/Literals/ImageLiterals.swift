@@ -13,6 +13,12 @@ enum ImageLiterals {
 
     static var rabbit: UIImage { .load(name: "rabbit")}
 
+    static var product1: UIImage { .load(name: "product1")}
+    static var product2: UIImage { .load(name: "product2")}
+    static var product3: UIImage { .load(name: "product3")}
+    static var product4: UIImage { .load(name: "product4")}
+    static var product5: UIImage { .load(name: "product5")}
+
 }
 
 extension UIImage {

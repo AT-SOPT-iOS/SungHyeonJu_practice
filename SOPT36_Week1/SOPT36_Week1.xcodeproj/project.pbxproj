@@ -36,6 +36,13 @@
 		E553A5692DA6C87600B92685 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553A5682DA6C87600B92685 /* UIButton+.swift */; };
 		E553A56D2DA6CCAD00B92685 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553A56C2DA6CCAD00B92685 /* UITextField+.swift */; };
 		E553A56F2DA6D62600B92685 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553A56E2DA6D62600B92685 /* UIColor+.swift */; };
+		E56DC49E2DBCB6320087DDA6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56DC49D2DBCB6320087DDA6 /* ChatViewController.swift */; };
+		E56DC4A22DBCB65F0087DDA6 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56DC4A12DBCB65F0087DDA6 /* ChatTableViewCell.swift */; };
+		E56DC4A52DBCB68A0087DDA6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E56DC4A42DBCB68A0087DDA6 /* SnapKit */; };
+		E56DC4A72DBCBA160087DDA6 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56DC4A62DBCBA160087DDA6 /* ChatModel.swift */; };
+		E56DC4AB2DBCC5A30087DDA6 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56DC4AA2DBCC5A30087DDA6 /* ItemViewController.swift */; };
+		E56DC4AD2DBCC5AB0087DDA6 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56DC4AC2DBCC5AB0087DDA6 /* ItemModel.swift */; };
+		E56DC4AF2DBCC5C60087DDA6 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56DC4AE2DBCC5C60087DDA6 /* ItemCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +77,12 @@
 		E553A5682DA6C87600B92685 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		E553A56C2DA6CCAD00B92685 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		E553A56E2DA6D62600B92685 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		E56DC49D2DBCB6320087DDA6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		E56DC4A12DBCB65F0087DDA6 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		E56DC4A62DBCBA160087DDA6 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		E56DC4AA2DBCC5A30087DDA6 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		E56DC4AC2DBCC5AB0087DDA6 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		E56DC4AE2DBCC5C60087DDA6 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56DC4A52DBCB68A0087DDA6 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +152,8 @@
 			children = (
 				E50608952DA0F54A00CC10EF /* LoginViewController.swift */,
 				E50608A22DA10D4000CC10EF /* WelcomeViewController.swift */,
+				E56DC4A92DBCC5710087DDA6 /* Item */,
+				E56DC4A82DBCBB8D0087DDA6 /* Chat */,
 				E54066A82DAA58EA00FD2C01 /* ScrollView */,
 				E54065CF2DAA4AD700FD2C01 /* AutoLayout */,
 				E54065C82DAA39FF00FD2C01 /* Closure */,
@@ -232,6 +248,34 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		E56DC49A2DBCB5F00087DDA6 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E56DC4A12DBCB65F0087DDA6 /* ChatTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		E56DC4A82DBCBB8D0087DDA6 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				E56DC49D2DBCB6320087DDA6 /* ChatViewController.swift */,
+				E56DC4A62DBCBA160087DDA6 /* ChatModel.swift */,
+				E56DC49A2DBCB5F00087DDA6 /* TableViewCell */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		E56DC4A92DBCC5710087DDA6 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				E56DC4AA2DBCC5A30087DDA6 /* ItemViewController.swift */,
+				E56DC4AC2DBCC5AB0087DDA6 /* ItemModel.swift */,
+				E56DC4AE2DBCC5C60087DDA6 /* ItemCollectionViewCell.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,6 +293,7 @@
 			);
 			name = SOPT36_Week1;
 			packageProductDependencies = (
+				E56DC4A42DBCB68A0087DDA6 /* SnapKit */,
 			);
 			productName = SOPT36_Week1;
 			productReference = E50608772DA0F4BD00CC10EF /* SOPT36_Week1.app */;
@@ -278,6 +323,9 @@
 			);
 			mainGroup = E506086E2DA0F4BD00CC10EF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E56DC4A32DBCB68A0087DDA6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E50608782DA0F4BD00CC10EF /* Products */;
 			projectDirPath = "";
@@ -325,11 +373,17 @@
 				E50608972DA0F54A00CC10EF /* AppDelegate.swift in Sources */,
 				E54066AA2DAA591E00FD2C01 /* ScrollViewController.swift in Sources */,
 				E54065C32DAA328C00FD2C01 /* LoginViewController_DelegatePattern.swift in Sources */,
+				E56DC4AB2DBCC5A30087DDA6 /* ItemViewController.swift in Sources */,
+				E56DC49E2DBCB6320087DDA6 /* ChatViewController.swift in Sources */,
+				E56DC4A72DBCBA160087DDA6 /* ChatModel.swift in Sources */,
 				E553A5672DA6C82D00B92685 /* BaseFillButton.swift in Sources */,
 				E54065CA2DAA3A1E00FD2C01 /* LoginViewController_Closure.swift in Sources */,
 				E54065C52DAA329800FD2C01 /* WelcomeViewController_DelegatePattern.swift in Sources */,
 				E50608982DA0F54A00CC10EF /* SceneDelegate.swift in Sources */,
 				E54065CC2DAA3A2A00FD2C01 /* WelcomeViewController_Closure.swift in Sources */,
+				E56DC4A22DBCB65F0087DDA6 /* ChatTableViewCell.swift in Sources */,
+				E56DC4AD2DBCC5AB0087DDA6 /* ItemModel.swift in Sources */,
+				E56DC4AF2DBCC5C60087DDA6 /* ItemCollectionViewCell.swift in Sources */,
 				E50608992DA0F54A00CC10EF /* LoginViewController.swift in Sources */,
 				E54065D12DAA4AEF00FD2C01 /* AutoLayoutViewController.swift in Sources */,
 			);
@@ -542,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E56DC4A32DBCB68A0087DDA6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E56DC4A42DBCB68A0087DDA6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E56DC4A32DBCB68A0087DDA6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E506086F2DA0F4BD00CC10EF /* Project object */;
 }
