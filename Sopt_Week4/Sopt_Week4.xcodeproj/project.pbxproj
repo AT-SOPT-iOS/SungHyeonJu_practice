@@ -15,6 +15,9 @@
 		E5B4FFE92DC5E42D00012BB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4FFE12DC5E42D00012BB0 /* SceneDelegate.swift */; };
 		E5B4FFEA2DC5E42D00012BB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4FFE22DC5E42D00012BB0 /* ViewController.swift */; };
 		E5B4FFEF2DC5E5C900012BB0 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4FFED2DC5E5C900012BB0 /* BaseUIViewController.swift */; };
+		E5B4FFF32DC5E8FF00012BB0 /* RegisterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4FFF22DC5E8FF00012BB0 /* RegisterDTO.swift */; };
+		E5B4FFF62DC5E91F00012BB0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4FFF52DC5E91F00012BB0 /* NetworkError.swift */; };
+		E5B4FFF92DC5E94200012BB0 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4FFF82DC5E94200012BB0 /* RegisterService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		E5B4FFE12DC5E42D00012BB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E5B4FFE22DC5E42D00012BB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E5B4FFED2DC5E5C900012BB0 /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
+		E5B4FFF22DC5E8FF00012BB0 /* RegisterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDTO.swift; sourceTree = "<group>"; };
+		E5B4FFF52DC5E91F00012BB0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E5B4FFF82DC5E94200012BB0 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +66,11 @@
 		E5B4FFE32DC5E42D00012BB0 /* Sopt_Week4 */ = {
 			isa = PBXGroup;
 			children = (
-				E5B4FFEC2DC5E5B700012BB0 /* Application */,
 				E5B4FFDC2DC5E42D00012BB0 /* Assets.xcassets */,
 				E5B4FFDE2DC5E42D00012BB0 /* Info.plist */,
 				E5B4FFE22DC5E42D00012BB0 /* ViewController.swift */,
+				E5B4FFF02DC5E8C300012BB0 /* Network */,
+				E5B4FFEC2DC5E5B700012BB0 /* Application */,
 				E5B4FFEE2DC5E5C900012BB0 /* Base */,
 			);
 			path = Sopt_Week4;
@@ -85,6 +92,40 @@
 				E5B4FFED2DC5E5C900012BB0 /* BaseUIViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		E5B4FFF02DC5E8C300012BB0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E5B4FFF72DC5E92B00012BB0 /* Service */,
+				E5B4FFF42DC5E90F00012BB0 /* NetworkError */,
+				E5B4FFF12DC5E8E700012BB0 /* DTO */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E5B4FFF12DC5E8E700012BB0 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				E5B4FFF22DC5E8FF00012BB0 /* RegisterDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		E5B4FFF42DC5E90F00012BB0 /* NetworkError */ = {
+			isa = PBXGroup;
+			children = (
+				E5B4FFF52DC5E91F00012BB0 /* NetworkError.swift */,
+			);
+			path = NetworkError;
+			sourceTree = "<group>";
+		};
+		E5B4FFF72DC5E92B00012BB0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E5B4FFF82DC5E94200012BB0 /* RegisterService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +210,10 @@
 				E5B4FFE72DC5E42D00012BB0 /* AppDelegate.swift in Sources */,
 				E5B4FFEF2DC5E5C900012BB0 /* BaseUIViewController.swift in Sources */,
 				E5B4FFE92DC5E42D00012BB0 /* SceneDelegate.swift in Sources */,
+				E5B4FFF62DC5E91F00012BB0 /* NetworkError.swift in Sources */,
 				E5B4FFEA2DC5E42D00012BB0 /* ViewController.swift in Sources */,
+				E5B4FFF92DC5E94200012BB0 /* RegisterService.swift in Sources */,
+				E5B4FFF32DC5E8FF00012BB0 /* RegisterDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
