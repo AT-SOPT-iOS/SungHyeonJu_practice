@@ -77,6 +77,7 @@ final class LoginViewController: BaseUIViewController {
         passwordTextField.addTarget(self, action: #selector(textFieldDidEditing(_:)), for: .allEvents)
         nickNameTextField.addTarget(self, action: #selector(textFieldDidEditing(_:)), for: .allEvents)
         infoViewButton.addTarget(self, action: #selector(infoViewButtonTap), for: .touchUpInside)
+        registerButton.addTarget(self, action: #selector(registerButtonTap), for: .touchUpInside)
     }
 
     //MARK: - Action Method
@@ -85,6 +86,38 @@ final class LoginViewController: BaseUIViewController {
 //        let infoVC = InfoViewController()
 //        self.present(infoVC, animated: true)
     }
+
+    @objc
+    private func registerButtonTap() {
+         Task {
+             do {
+                 let response = try await RegisterService.shared.PostRegisterData(loginId: self.loginId,
+                                                                                  password: self.password,
+                                                                                  nickName: self.nickName)
+
+                 let alert = UIAlertController(
+                     title: "계정 생성 성공",
+                     message: "환영합니다, \(response.nickname)님! (ID: \(response.userId))",
+                     preferredStyle: .alert
+                 )
+
+                 let okAction = UIAlertAction(title: "확인", style: .default)
+                 alert.addAction(okAction)
+                 self.present(alert, animated: true)
+             } catch {
+                 let alert = UIAlertController(
+                     title: "계정 생성 실패",
+                     message: error.localizedDescription,
+                     preferredStyle: .alert
+                 )
+                 let okAction = UIAlertAction(title: "확인", style: .default)
+                 alert.addAction(okAction)
+                 self.present(alert, animated: true)
+
+                 print("회원가입 에러:", error)
+             }
+         }
+     }
 
     @objc
     private func textFieldDidEditing(_ textField: UITextField) {
@@ -99,3 +132,4 @@ final class LoginViewController: BaseUIViewController {
     }
 
 }
+
