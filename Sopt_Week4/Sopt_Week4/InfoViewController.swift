@@ -29,16 +29,20 @@ final class InfoViewController: UIViewController {
 
 
     @objc private func searchButtonTap() {
-        Task {
-            do {
-                let response = try await NicknameService.shared.fetchNicknameList(keyword: self.keyword, userId: self.userId)
-                print(response)
+            Task {
+                do {
+                    let nicknameList = try await NicknameService.shared.fetchNicknameList(
+                        keyword: self.keyword.isEmpty ? nil : self.keyword
+                    )
 
-                infoLabel.text = "닉네임 리스트 \(response)"
+                    let nicknameTexts = nicknameList.map { "\($0)" }.joined(separator: "\n")
+                    self.infoLabel.text = "닉네임 리스트:\n\(nicknameTexts)"
+
+                } catch {
+                    self.infoLabel.text = "조회 실패: \(error.localizedDescription)"
+                }
             }
         }
-    }
-
 
     @objc private func textFieldDidEditing(_ textField: UITextField) {
         self.keyword = textField.text ?? ""
