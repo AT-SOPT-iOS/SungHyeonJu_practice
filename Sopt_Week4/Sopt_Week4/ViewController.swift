@@ -83,8 +83,8 @@ final class LoginViewController: BaseUIViewController {
     //MARK: - Action Method
     @objc
     private func infoViewButtonTap() {
-//        let infoVC = InfoViewController()
-//        self.present(infoVC, animated: true)
+        let infoVC = InfoViewController()
+        self.present(infoVC, animated: true)
     }
 
     @objc
